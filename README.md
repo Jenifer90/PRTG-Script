@@ -1,5 +1,5 @@
 # Adavanced Script Examples
-Adavanced Script Examples for PRTG Administrator to monitor systems and applications
+Adavanced Script Examples for PRTG administrators to monitor systems and applications
 
 ## Python scripts list
 ### VMware
