@@ -32,14 +32,14 @@ $ErrorPreference = "Stop"
 # check parameters
 if (!$server -or !$username -or !$domain -or !$password -or !$taskname)
 {
-	$output  = @"
+    $output  = @"
 <prtg>
 <error>1</error>
 <text>1 or more missing parameters. Expected parameters are : -server &lt;server&gt; -domain &lt;domain&gt; -username &lt;username&gt; -password &lt;password&gt; -taskname &lt;taskname&gt; </text>
 </prtg>
 "@
-	write-output $output
-	exit 2
+    write-output $output
+    exit 2
 }
 
 # Create Component object Schedule.Service
@@ -59,43 +59,43 @@ try{
 
 # Get task info
 try{
-   $task = $schedule.getfolder('\').gettask("\$taskname")
+    $task = $schedule.getfolder('\').gettask("\$taskname")
 }catch{
-		$output  = @"
+    $output  = @"
 <prtg>
 <error>1</error>
 <text>Error retrieving scheduled task $taskname from target server $server</text>
 </prtg>
 "@
-		Write-output $output
-		exit 2    
+    Write-output $output
+    exit 2        
 }
 
 # Get LastRunTime and calculate task age
 try{
-	$task_lastruntime 	 = $task.LastRunTime 
-	$task_lasttaskresult = $task.LastTaskResult
-	$task_age_hours      = [math]::round(((Get-Date) - $task_lastruntime).Totalhours,2)
+    $task_lastruntime 	 = $task.LastRunTime 
+    $task_lasttaskresult = $task.LastTaskResult
+    $task_age_hours      = [math]::round(((Get-Date) - $task_lastruntime).Totalhours,2)
 }catch{
-		$output  = @"
+   $output  = @"
 <prtg>
 <error>1</error>
 <text>Error retrieving scheduled task information from target server $server</text>
 </prtg>
 "@
-		Write-output $output
-		exit 2    
+    Write-output $output
+    exit 2    
 }
 
 # switch result to prtg result:
 switch ($task_lasttaskresult)
 {
-	0       {$task_lasttaskresult_prtg=0; $task_lasttaskresult_text='is successful'}       # 0                    : 0 => Successful
-	267009  {$task_lasttaskresult_prtg=1; $task_lasttaskresult_text='is running'}          # 267009 (0x00041301)  : 1 => Currently running
-	default {$task_lasttaskresult_prtg=2; $task_lasttaskresult_text='is in error'}         # default              : 2 => Error
+    0       {$task_lasttaskresult_prtg=0; $task_lasttaskresult_text='is successful'}       # 0                    : 0 => Successful
+    267009  {$task_lasttaskresult_prtg=1; $task_lasttaskresult_text='is running'}          # 267009 (0x00041301)  : 1 => Currently running
+    default {$task_lasttaskresult_prtg=2; $task_lasttaskresult_text='is in error'}         # default              : 2 => Error
 }
 
-	$output = @"
+    $output = @"
 <prtg>
 
 <result>
