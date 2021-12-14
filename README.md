@@ -12,6 +12,6 @@ Adavanced Script Examples for PRTG administrators to monitor systems and applica
   - [Windows_ScheduledTask.ps1](https://github.com/VCNTQA/PRTG-Script/blob/main/Windows_ScheduledTask.ps1)
   - [customized.WindowsScheduledTask.Status.ovl](https://github.com/VCNTQA/PRTG-Script/blob/main/customized.WindowsScheduledTask.Status.ovl)
 
-     If there is more than one action in the scheduled task, the last result may be another code -2147020576 ([0x800710E0](https://windows-hexerror.linestarve.com/0x800710E0)
-     *The operator or administrator has refused the request*) during the execution.
-     The recommanded solution is to merge these actions into one action if possible.
+      If there is more than one action in the scheduled task, the last result may be another code:
+      -2147020576 ([0x800710E0](https://windows-hexerror.linestarve.com/0x800710E0) *The operator or administrator has refused the request*) during the execution.
+      The recommanded solution is to merge these actions into one action if possible.
