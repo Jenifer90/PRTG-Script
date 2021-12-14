@@ -67,7 +67,7 @@ if __name__ == "__main__":
                 # Update not found
                 output                 = f'No available Updates {r_update.status_code} {r_update.reason}'
                 update_available_count = 0
-                exitcode = ExitOK
+                exitcode               = ExitOK
                 csr                    = CustomSensorResult(text=output)
                 csr.add_channel(name="Available Updates", value=update_available_count, is_float=True, is_limit_mode=True,  limit_min_error=0, limit_max_error=0.5)
             else:
