@@ -7,17 +7,17 @@
 #     -password  : Password for the account
 #     -taskname  : Scheduled task name
 # Return codes of script:
-# 		- 0 OK
-#			- 1 Target server connection error
-#			- 2 Cannot get scheduled taskpath or taksname info
-# PRTG Channel vlookup file 
+#     - 0 OK
+#     - 1 Target server connection error
+#     - 2 Cannot get scheduled taskpath or taksname info
+# PRTG Channel vlookup file:
 #     - customized.WindowsScheduledTask.Status.ovl (https://github.com/VCNTQA/PRTG-Script/blob/main/customized.WindowsScheduledTask.Status.ovl)
 # INFO (LastResult of scheduled task):
-# 		- 0 The operation completed successfully.
-#			- 1 Incorrect function called or unknown function called.
-#			- 2 File not found.
+#     - 0 The operation completed successfully.
+#     - 1 Incorrect function called or unknown function called.
+#     - 2 File not found.
 #     - 267009 (0x00041301) Currently running.
-#			- more retunr codes could be found https://en.wikipedia.org/wiki/Windows_Task_Scheduler
+#     - more retunr codes could be found https://en.wikipedia.org/wiki/Windows_Task_Scheduler
 
 param (
     [string]$server   ,
