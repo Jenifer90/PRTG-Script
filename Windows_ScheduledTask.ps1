@@ -47,7 +47,7 @@ try{
     $schedule = new-object -com("Schedule.Service")
     $schedule.connect($server, $username, $domain, $password)
 }catch{
-        $output = @"
+    $output = @"
 <prtg>
 <error>1</error>
 <text>Unable to establish connection to remote server $server</text>
