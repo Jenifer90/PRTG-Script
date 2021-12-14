@@ -11,7 +11,7 @@
 #			- 1 Target server connection error
 #			- 2 Cannot get scheduled taskpath or taksname info
 # PRTG Channel vlookup file 
-#     - customized.WindowsScheduledTask.Status ()
+#     - customized.WindowsScheduledTask.Status.ovl (https://github.com/VCNTQA/PRTG-Script/blob/main/customized.WindowsScheduledTask.Status.ovl)
 # INFO (LastResult of scheduled task):
 # 		- 0 The operation completed successfully.
 #			- 1 Incorrect function called or unknown function called.
