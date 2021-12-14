@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <ValueLookup id="customized.WindowsScheduledTask.Status" desiredValue="0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="PaeValueLookup.xsd">
+    <Lookups>
+      <SingleInt state="OK" value="0">
+        OK
+      </SingleInt>
+      <SingleInt state="OK" value="1">
+        The task is currently running
+      </SingleInt>
+      <SingleInt state="Error" value="2">
+        Error
+      </SingleInt>	  	  
+    </Lookups>
+  </ValueLookup>
