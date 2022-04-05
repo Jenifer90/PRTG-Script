@@ -16,4 +16,9 @@ Adavanced script examples for PRTG administrators to monitor systems and applica
   
   - [Windows_ScheduledTask.ps1](https://github.com/VCNTQA/PRTG-Script/blob/main/Windows_ScheduledTask.ps1)
   - [customized.WindowsScheduledTask.Status.ovl](https://github.com/VCNTQA/PRTG-Script/blob/main/customized.WindowsScheduledTask.Status.ovl)
+  
+### Linux
+- Get Maxscale servers information (node role, node status, and replication info).
+ -  [Maxscale_check.ps1](https://github.com/VCNTQA/PRTG-Script/blob/main/Windows_ScheduledTask.ps1)
+ - [customized.WindowsScheduledTask.Status.ovl]()
 
